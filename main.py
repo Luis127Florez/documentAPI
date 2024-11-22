@@ -8,31 +8,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World xasx"}
- 
-#@app.post("/htmlToPng")  
-#def changeHTML(codeHTML: str):
-#    try:
-#        hti = Html2Image()
-#        # Decodificar el PDF base64 recibido
-#        
-#        html = codeHTML
-#        
-#        css = """
-#        body { background: white; margin: 0; padding: 20px; }
-#        p { font-size: 32px; line-height: 1.6; text-align: justify; }
-#        h1 { font-size: 44px; text-align: center; }
-#        """
-#        
-#        img = hti.screenshot(html_str=html, css_str=css, save_as='asd.png', size=(2480, 3508))
-#        
-#    
-#        # Devolver la imagen en formato base64
-#        return {"file": img}
-#
-#    except Exception as e:
-#        return {"error": str(e)}
-    
+    return { "Hello": "run World" }
 
 @app.post("/convert_pdf_toImage_by_pages")
 async def convert_pdf_and_upload(pdf_base64: str = Form(...)):
